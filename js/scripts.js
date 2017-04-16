@@ -1,22 +1,21 @@
 // plik scripts.js
-var button = document.getElementsByClassName('button');
-var n = button.length;
+var buttons = document.getElementsByClassName('button');
+var n = buttons.length;
 var i;
-var ourTable = button;
-for (i = 0; i < n; i++) {
-
-  // tekstprzycisku(i);
-  function tekstprzycisku() {
-    var przycisk = document.getElementById('przycisk');
-    var newElem = document.createElement('p');
-    //newElem.innerHTML = button [i];
-    newElem.innerText = button [i];
-    przycisk.appendChild(newElem);
-  }
-  tekstprzycisku();
+function tekstprzycisku(i) {
+  var przycisk = document.getElementById('przycisk');
+  var newElem = document.createElement('p');
+  newElem.innerText = buttons[i].innerText;
+  przycisk.appendChild(newElem);
 }
 
-console.log(button);
-console.log(button.length);
+for (i = 0; i < n; i++) {
+  tekstprzycisku(i);
+}
+
+
+console.log(buttons);
+console.log(buttons.length);
 console.log(n);
 console.log(i);
+console.log(tekstprzycisku);
